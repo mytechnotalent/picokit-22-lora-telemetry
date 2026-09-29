@@ -1,0 +1,68 @@
+{
+  "repo": "picokit-22-lora-telemetry",
+  "eyebrow": "PICOKIT // LESSON 22",
+  "title": "PICOKIT // LORA TELEMETRY",
+  "subtitle": "DHT TELEMETRY + AUTHENTICATED HEARTBEAT",
+  "accent": "#24FFDB",
+  "dim": "#169E87",
+  "white": "#D5F6F9",
+  "cyan": "#7FD8E0",
+  "bg": "#02110F",
+  "bg_edge": "#000504",
+  "icon": "antenna",
+  "panel_status": "T 23.0 C  ·  H 61 %  ·  AEAD :ON",
+  "chips": [
+    {
+      "label": "SAMPLE",
+      "value": "2 s"
+    },
+    {
+      "label": "UPLINK",
+      "value": "5 s"
+    },
+    {
+      "label": "KEY",
+      "value": "argon2id"
+    },
+    {
+      "label": "RADIO",
+      "value": "-41 dBm"
+    }
+  ],
+  "terminal": [
+    "$ gateway listen /dev/cu.usbserial-A50285BI",
+    "[*] node 00022  seq 18  TELEMETRY  AEAD ok",
+    "[*] t 23.0 C  h 61.0 %  window ok",
+    "[+] logged full telemetry body  seq 18",
+    "[+] ack sent  rssi -41  snr 8.0"
+  ],
+  "categories": [
+    "SAMPLE",
+    "UPLINK",
+    "SECURE",
+    "LINK"
+  ],
+  "cards": [
+    {
+      "tag": "DHT-01",
+      "label": "sample",
+      "value": "2 s"
+    },
+    {
+      "tag": "TX-01",
+      "label": "uplink",
+      "value": "5 s"
+    },
+    {
+      "tag": "HB-01",
+      "label": "heartbeat",
+      "value": "5 s"
+    }
+  ],
+  "footer": [
+    "1 NODE  ·  1 GATEWAY  ·  DHT11 TELEMETRY  ·  NO PLAINTEXT",
+    "PICOKIT SERIES  ·  SAMPLE  ·  SEAL  ·  RADIO  ==[ TELEMETRY ]=="
+  ],
+  "layout": "split",
+  "stat": "2 s"
+}
